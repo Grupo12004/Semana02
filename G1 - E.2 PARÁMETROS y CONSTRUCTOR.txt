@@ -1,0 +1,20 @@
+//PARÁMETROS
+public int sumar(int num1, int num2) {
+    int resultado = num1 + num2;
+    return resultado;
+}
+int resultado = sumar(3, 5);
+
+//CONSTRUCTORES
+public class Persona {
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // otros métodos de la clase
+}
+Persona p = new Persona("Juan", 30);
