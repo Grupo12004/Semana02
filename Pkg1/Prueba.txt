@@ -1,4 +1,4 @@
-12345
+
 // Método "area" para un cuadrado
    public double area(double lado) {
       return lado * lado;
