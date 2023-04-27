@@ -1,0 +1,58 @@
+public class FigurasGeometricas {
+
+   // Método "area" para un cuadrado
+   public double area(double lado) {
+      return lado * lado;
+   }
+
+   // Método "area" para un rectángulo
+   public double area(double base, double altura) {
+      return base * altura;
+   }
+
+   // Método "area" para un círculo
+   public double area(double radio, String unidad) {
+      double area = Math.PI * radio * radio;
+      if (unidad.equals("cm")) {
+         return area;
+      } else if (unidad.equals("m")) {
+         return area * 10000;
+      } else {
+         throw new IllegalArgumentException("La unidad especificada no es válida.");
+      }
+   }
+}
+
+
+-------------------------------------------------------------------------------------------------------
+class Calculadora {
+    static final double PI = 3.14159; // variable estática
+
+    // método estático
+    public static double sumar(double a, double b) {
+        return a + b;
+    }
+
+    // método con varargs
+    public static double sumarNumeros(double... numeros) {
+        double total = 0;
+        for (double numero : numeros) {
+            total += numero;
+        }
+        return total;
+    }
+}
+
+public class EjemploStaticYVargs {
+    public static void main(String[] args) {
+        // Acceder a la variable estática
+        System.out.println("Valor de PI: " + Calculadora.PI);
+
+        // Llamar al método estático
+        System.out.println("Suma: " + Calculadora.sumar(2.0, 3.0));
+
+        // Llamar al método con varargs
+        System.out.println("Suma de números: " + Calculadora.sumarNumeros(1.0, 2.0, 3.0, 4.0, 5.0));
+    }
+}
+

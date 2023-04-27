@@ -1,0 +1,64 @@
+1
+public class EjemploRobot {
+  public static void main(String[] args) {
+
+    private String nombre = "Arturito";
+
+
+    Robot robot01 = new Robot("Arturito", 0, 0);
+    //Variable de referencia
+    Robot robot02 = robot01;
+
+    System.out.println(robot01.mostrarUbicacion());         
+    //Salida: Arturito esta en la posición (0, 0)  
+
+    System.out.println(robot02.mostrarUbicacion()); 
+    //Salida: Arturito esta en la posición (0, 0)  
+
+
+    Robot robotArturito = new Robot("Arturito", 0, 0);
+
+
+  }
+
+}
+
+
+
+public class Robot {
+    private String nombre;
+    private int x, y;
+
+    public Robot(String nombre, int x, int y) {
+        this.nombre = nombre;
+        this.x = x;
+        this.y = y;
+    }
+    
+
+    public void moverAdelante(int distancia) {
+        y += distancia;
+    }
+    
+    public void moverAtras(int distancia) {
+        y -= distancia;
+    }
+    
+    public void moverIzquierda (int distancia) {
+        x -= distancia;
+    }
+    
+    public void moverDerecha (int distancia) {
+        x += distancia;
+    }
+    
+    public void mostrarUbicacion() {
+        System.out.println(nombre + " esta en la posiciooooooon (" + x + ", " + y + ")");
+    }
+    // Método con retorno
+    public static String saludo(){
+         return "Hola, mi nombre es " + nombre;
+    }
+}
+
+    
