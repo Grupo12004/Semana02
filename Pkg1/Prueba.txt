@@ -1,1 +1,20 @@
 12345
+// Método "area" para un cuadrado
+   public double area(double lado) {
+      return lado * lado;
+   }
+
+   // Método "area" para un rectángulo
+   public double area(double base, double altura) {
+      return base * altura;
+   }
+
+   // Método "area" para un círculo
+   public double area(double radio, String unidad) {
+      double area = Math.PI * radio * radio;
+      if (unidad.equals("cm")) {
+         return area;
+      } else if (unidad.equals("m")) {
+         return area * 10000;
+      } else {
+         throw new IllegalArgumentException("La unidad especificada no es válida.");
